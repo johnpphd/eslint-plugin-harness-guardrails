@@ -1,0 +1,67 @@
+{
+  "name": "eslint-plugin-harness-guardrails",
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.33.0",
+  "description": "ESLint rules enforcing harness-level shape limits: hook density per component, dispatch table width, positional data at module boundaries",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "prettier": "prettier --check \"src/**/*.ts\" \"tests/**/*.ts\" \"*.md\" \"*.json\"",
+    "prettier:fix": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\" \"*.md\" \"*.json\"",
+    "test": "vitest run",
+    "build": "tsc",
+    "prepare": "tsc",
+    "prepublishOnly": "tsc"
+  },
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "typescript",
+    "react",
+    "harness",
+    "ai-coding",
+    "architecture"
+  ],
+  "license": "MIT",
+  "author": "John Pearson",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnpphd/eslint-plugin-harness-guardrails"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "minimatch": "^10.2.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@typescript-eslint/parser": "^8.58.0",
+    "@typescript-eslint/rule-tester": "^8.58.0",
+    "@typescript-eslint/typescript-estree": "^8.58.0",
+    "@typescript-eslint/utils": "^8.58.0",
+    "eslint": "^10.0.3",
+    "prettier": "^3.8.1",
+    "typescript": "^5.7.0",
+    "typescript-eslint": "^8.58.0",
+    "vitest": "^3.2.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=9.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ]
+}
